@@ -1,0 +1,36 @@
+\documentclass{arcpubs}
+
+\usepackage{tabularx}
+
+% Add one or more bibtex files containing papers, etc.
+\addbibresource{mybibliography.bib}
+
+\StartYear{2004}
+% your papers will be matched only by last name
+\Author{Bloggs}
+
+% Add all citations to the 'relevant' category which should be starred
+\addtocategory{relevant}{%
+Smith2011,Jones2012,Bloggs2009,Bloggs2007a,
+}
+
+\begin{document}
+\nocite{*}
+\showbooks
+\showchapters
+\showarticles
+\showproceedings
+
+\begin{center}
+\begin{tabularx}{\textwidth}{ |c|p{3cm}|p{2cm}|p{2cm}|X|p{2.5cm}| }
+\hline
+Project ID & CI/PI Fellow Name/s & Amount Funded & Number of years & Project Title & Outputs \\
+\hline
+DPXXXXXXX & Bloggs, Smith & \$300,000 & 3 & Exciting Science from years gone by & 
+\cite{Jones2012} \\ % add all papers to this line which are associated with this grant
+\hline
+\end{tabularx}
+\end{center}
+
+\end{document}
+
