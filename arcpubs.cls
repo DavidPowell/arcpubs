@@ -60,8 +60,6 @@ defernumbers=true]{biblatex}
 \AtDataInput{%
   \indexnames[byname][1-99]{author}}
 
-\pagestyle{empty}
-
 % avoid trying to justify text, as this can lead to overfull boxes
 \renewcommand*{\bibfont}{\raggedright}
 
@@ -75,5 +73,6 @@ defernumbers=true]{biblatex}
 % minimum margin size is 0.5cm, set to 1cm to be sure
 \RequirePackage[margin=1cm]{geometry}
 
+\pagestyle{empty}
 
 \endinput
