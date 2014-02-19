@@ -1,6 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{arcpubs}[2013/02/07 LaTeX package for to create a list of  publications for Australian Research Council grant applications]
 
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+
 \RequirePackage[backend=biber, url=false, doi=false, isbn=false, style=phys, biblabel=brackets, sorting=ydnt, texencoding=utf8,
 defernumbers=true]{biblatex}
 
