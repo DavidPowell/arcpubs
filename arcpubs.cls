@@ -70,8 +70,8 @@ defernumbers=true]{biblatex}
 
 \LoadClass[a4paper,12pt]{article}
 
-% minimum margin size is 0.5cm, set to 1cm to be sure
-\RequirePackage[margin=1cm]{geometry}
+% minimum margin size is 0.5cm
+\RequirePackage[margin=0.5cm]{geometry}
 
 \pagestyle{empty}
 
