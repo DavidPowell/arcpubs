@@ -64,7 +64,7 @@ defernumbers=true]{biblatex}
 \renewcommand*{\bibfont}{\raggedright}
 
 \newcommand{\showbooks}{\printbibliography[title={Books}, type=book, category=byname, check=recent]}
-\newcommand{\showchapters}{\printbibliography[title={Book Chapters}, type=incollection, category=byname, check=recent, heading=subbibliography]}
+\newcommand{\showchapters}{\printbibliography[title={Book Chapters}, type=inbook, category=byname, check=recent, heading=subbibliography]}
 \newcommand{\showarticles}{\printbibliography[title={Journal Articles}, type=article, category=byname, check=recent, heading=subbibliography]}
 \newcommand{\showproceedings}{\printbibliography[title={Conference Proceedings}, type=inproceedings, category=byname, check=recent, heading=subbibliography]}
 
@@ -72,7 +72,9 @@ defernumbers=true]{biblatex}
 
 % Use San-serif headings
 \usepackage{sectsty}
-\allsectionsfont{\normalfont\sffamily\bfseries}
+\sectionfont{\fontsize{12}{15}\bfseries\selectfont}
+\subsectionfont{\fontsize{12}{15}\selectfont}
+
 
 % minimum margin size is 0.5cm
 \RequirePackage[margin=0.5cm]{geometry}
