@@ -2,6 +2,7 @@
 \ProvidesPackage{arcpubs}[2013/02/07 LaTeX package for to create a list of  publications for Australian Research Council grant applications]
 
 \usepackage{textcomp}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
 \RequirePackage[backend=biber, url=false, doi=false, isbn=false, style=phys, biblabel=brackets, sorting=ydnt, texencoding=utf8,
@@ -11,9 +12,9 @@ defernumbers=true]{biblatex}
 
 % underline authors which match the given last name
 \DeclareNameFormat{author}{%
-\ifthenelse{\equal{#1}{\filterlastname}}%
-    {\textbf{\uline{\ifblank{#4}{}{#4\space}#1}}}%
-    {\ifblank{#4}{}{#4\space}#1}%
+\ifthenelse{\equal{\namepartfamily}{\filterlastname}}%
+    {\textbf{\uline{\ifblank{\namepartgiveni}{}{\namepartgiveni\space}\namepartfamily}}}%
+    {\ifblank{\namepartgiveni}{}{\namepartgiveni\space}\namepartfamily}%
 \ifthenelse{\value{listcount}<\value{liststop}}%
     {\addcomma\space}
     {}}
@@ -63,10 +64,10 @@ defernumbers=true]{biblatex}
 % avoid trying to justify text, as this can lead to overfull boxes
 \renewcommand*{\bibfont}{\raggedright}
 
-\newcommand{\showbooks}{\printbibliography[title={Books}, type=book, category=byname, check=recent]}
-\newcommand{\showchapters}{\printbibliography[title={Book Chapters}, type=inbook, category=byname, check=recent, heading=subbibliography]}
-\newcommand{\showarticles}{\printbibliography[title={Journal Articles}, type=article, category=byname, check=recent, heading=subbibliography]}
-\newcommand{\showproceedings}{\printbibliography[title={Conference Proceedings}, type=inproceedings, category=byname, check=recent, heading=subbibliography]}
+\newcommand{\showbooks}{\printbibliography[title={Books}, type=book, check=recent]}
+\newcommand{\showchapters}{\printbibliography[title={Book Chapters}, type=inbook, check=recent, heading=subbibliography]}
+\newcommand{\showarticles}{\printbibliography[title={Journal Articles}, type=article, check=recent, heading=subbibliography]}
+\newcommand{\showproceedings}{\printbibliography[title={Conference Proceedings}, type=inproceedings, check=recent, heading=subbibliography]}
 
 \LoadClass[a4paper,12pt]{article}
 
